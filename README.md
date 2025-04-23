@@ -13,6 +13,13 @@ This project showcases the use of FreeRTOS (Free Real-Time Operating System) on 
 2. Demonstrate how de-coupling enhances system maintainability.
 3. Showcase cohesive interactions between application layer modules.
 
+## My code contributions
+See the following files for code that I wrote to make this project work:
+- main.c - application entry point that calls into mcu.c to initialize hardware, sets up the LED application module (led_controller.c), then starts the scheduler
+- Application/led_controller.c (.h) - application module that toggles an LED using a FreeRTOS timer
+- System/scheduler.c (.h) - wrapper for FreeRTOS task, timer, and messaging
+- Hardware/mcu.c (.h) - microcontroller hardware resources initialization
+
 ## Hardware Requirements
 - Arduino Due development board.
 - USB cable (for basic power and initial setup).
